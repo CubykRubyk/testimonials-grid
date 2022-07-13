@@ -1,0 +1,259 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+code,
+em,
+img,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+canvas,
+embed,
+footer,
+header,
+nav,
+section,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+footer,
+header,
+nav,
+section,
+main {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+input {
+	-webkit-appearance: none;
+	border-radius: 0;
+}
+
+body {
+	background-color: rgba(236, 242, 248, 1);
+	font-family: "Barlow Semi Condensed", sans-serif;
+	height: 100%;
+}
+
+.wrapper {
+	height: 100%;
+	display: flex;
+	justify-items: center;
+	align-items: center;
+	box-sizing: border-box;
+}
+
+.grid__container {
+	margin: 30px;
+	display: grid;
+	column-gap: 30px;
+	row-gap: 24px;
+	/*TODO: delete absolute height and center the container*/
+	min-height: 572px;
+}
+
+@media (min-width: 1140px) {
+	.grid__container {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		max-width: 1110px;
+		margin: 20px auto;
+		/* Hack to center container when you know hight and width*/
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -286px 0 0 -555px;
+	}
+
+}
+
+@media (min-width:540px) {
+	.item__big {
+		grid-column: span 2;
+	}
+
+	.item__vertical {
+		grid-row: span 2;
+	}
+
+}
+
+@media (max-width: 540px) {
+	.grid__container {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
+		max-width: 1110px;
+		margin: 24px;
+	}
+}
+
+.grid__item {
+	padding: 26px 32px 26px 32px;
+	box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.247378);
+	border-radius: 8px;
+	color: #fff;
+	background-color: white;
+	position: relative;
+	z-index: -1;
+}
+
+
+.item__title {
+	font-family: 'Barlow Semi Condensed';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 24px;
+	padding-top: 18px;
+}
+
+.item__header {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.item__image img {
+	width: 28px;
+	height: 28px;
+	margin-right: 17px;
+}
+
+.item__subtitle {
+	font-family: 'Barlow Semi Condensed';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 18px;
+	opacity: 0.7;
+	padding-top: 24px;
+}
+
+
+.item__name {
+	padding-bottom: 3px;
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 13px;
+
+}
+
+
+.item__graduate {
+	font-weight: 500;
+	font-size: 11px;
+	line-height: 11px;
+	opacity: 0.5;
+}
+
+.grid__item:nth-child(1) {
+	background-color: rgba(115, 63, 200, 1);
+	position: relative;
+}
+
+.grid__item:nth-child(1)::before {
+	width: 104px;
+	height: 104px;
+	position: absolute;
+	top: 0%;
+	right: 80px;
+	content: url("../images/quote.svg");
+	z-index: -2;
+}
+
+.grid__item:nth-child(2) {
+	background-color: rgba(72, 85, 106, 1)
+}
+
+.grid__item:nth-child(3) {
+	background-color: #fff;
+	color: rgba(72, 85, 106, 1);
+}
+
+.grid__item:nth-child(4) {
+	background-color: #fff;
+	color: rgba(72, 85, 106, 1);
+}
+
+.grid__item:nth-child(5) {
+	background-color: rgba(25, 32, 45, 1)
+}
